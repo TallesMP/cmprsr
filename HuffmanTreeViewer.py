@@ -1,5 +1,5 @@
+
 from graphviz import Digraph
-from huffman import HuffmanCompressor
 
 
 class HuffmanTreeViewer:
@@ -7,6 +7,7 @@ class HuffmanTreeViewer:
         self.root = root
         self.output_filename = output_filename
         self.graph = Digraph(format="png")
+        self.graph.attr(size="15,15")
 
     def _add_nodes_edges(self, node, parent_name=None, edge_label=""):
         if node is None:
